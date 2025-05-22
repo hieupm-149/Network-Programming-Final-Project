@@ -12,9 +12,9 @@ class LobbyServer:
         self.server_socket.bind((self.host, self.port))
         self.server_socket.listen(5)
 
-        self.clients = {}  # username -> {socket, room, status}
-        self.rooms = {}    # room_code -> {players: [usernames]}
-        self.users = {}    # username -> password
+        self.clients = {}  
+        self.rooms = {}    
+        self.users = {}    
         self.lock = threading.Lock()
 
     def generate_room_code(self):
